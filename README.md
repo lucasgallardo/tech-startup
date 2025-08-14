@@ -2,7 +2,7 @@
 
 Landing page moderna y responsiva para startups tecnológicas. Incluye animaciones, cuenta regresiva, formulario de registro y diseño optimizado para conversión.
 
-![Preview](preview.png)
+![Preview](assets/preview.png)
 
 ---
 

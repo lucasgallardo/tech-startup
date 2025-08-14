@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tech Startup</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div id="loader">
+  <div class="spinner"></div>
+</div>
+
+  <header>
+    <div class="logo">
+      <img src="assets/logo.png" alt="Tech Startup Logo" />
+      <h1>TECH STARTUP</h1>
+    </div>
+    <nav>
+      <a href="#features">Características</a>
+      <a href="#registro">Registro</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Revolucionamos el futuro</h2>
+    <p>Únete a la próxima gran innovación tecnológica</p>
+    <div class="countdown">¡Lanzamos en: <span id="timer">128d : 04h : 42m : 29s</span></div>
+    <form id="registro">
+      <input type="email" placeholder="Tu correo electrónico" required />
+      <button type="submit">Pre-registrarme</button>
+    </form>
+    <p class="share">Comparte y gana acceso anticipado 🚀</p>
+  </section>
+
+  <section class="features" id="features">
+    <h3>¿Por qué elegirnos?</h3>
+    <div class="cards">
+      <div class="card">
+        <span>🔒</span>
+        <h4>Seguridad avanzada</h4>
+        <p>Cifrado de última generación para proteger tus datos.</p>
+      </div>
+      <div class="card">
+        <span>⚡</span>
+        <h4>Rendimiento optimizado</h4>
+        <p>Velocidad y eficiencia para usuarios exigentes.</p>
+      </div>
+      <div class="card">
+        <span>🌐</span>
+        <h4>Conectividad global</h4>
+        <p>Acceso desde cualquier parte del mundo.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h3>Invita a tus amigos</h3>
+    <p>Por cada referido, ganas prioridad en el acceso</p>
+    <button>Compartir en redes</button>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Tech Startup. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+  window.addEventListener("load", () => {
+    const loader = document.getElementById("loader");
+    loader.style.display = "none";
+  });
+</script>
+<script>
+  const countdown = document.getElementById("timer");
+  const launchDate = new Date("2025-12-20T00:00:00").getTime();
+
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = launchDate - now;
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((distance / (1000 * 60)) % 60);
+    const seconds = Math.floor((distance / 1000) % 60);
+
+    countdown.textContent = `${days}d : ${hours}h : ${minutes}m : ${seconds}s`;
+  }
+
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+</script>
+
+</body>
+</html>
